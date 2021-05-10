@@ -1,0 +1,8 @@
+#!name=Adguard subscription
+#!desc=Intercepts the Adguard license verification and adds the subscription data
+
+[URL Rewrite]
+^https:\/\/mobile-api\.adguard\.com\/api\/1\.0\/ios_validate_receipt$ "https://raw.githack.com/aazbeltran/Surge/main/Mocks/Adguard.json" 302
+
+[MITM]
+hostname = %APPEND% mobile-api.adguard.com

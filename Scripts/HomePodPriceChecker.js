@@ -1,6 +1,6 @@
 const cachedPrice = $persistentStore.read()
 
-$httpClient.post('https://www.costco.com.mx/Electronicos/Apple/Accesorios-y-Audio-Apple/Apple-HomePod-Gris-Espacial/p/654787', function (error, response, data) {
+$httpClient.get('https://www.costco.com.mx/Electronicos/Apple/Accesorios-y-Audio-Apple/Apple-HomePod-Gris-Espacial/p/654787', function (error, response, data) {
     if (error) {
         console.log(error)
         $notification.post('HomePod Pricer', 'Ocurrió un error')

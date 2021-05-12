@@ -1,0 +1,8 @@
+#!name=Splitwise subscription
+#!desc=Intercepts the Splitwise license verification and adds the subscription data
+
+[Script]
+Splitwise = requires-body=1,max-size=0,type=http-response,pattern=^https:\/\/secure\.splitwise\.com\/api\/v3\.0\/get_main_data,script-path=https://cdn.jsdelivr.net/gh/aazbeltran/Surge/Scripts/Splitwise.js
+
+[MITM]
+hostname = %APPEND% secure.splitwise.com

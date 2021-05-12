@@ -1,0 +1,8 @@
+#!name=PantoneStudio subscription
+#!desc=Intercepts the PantoneStudio license verification and adds the subscription data
+
+[Script]
+PantoneStudio = requires-body=1,max-size=0,type=http-response,pattern=^https:\/\/studio\.pantone\.com\/api\/1\/receipt\/validate,script-path=https://cdn.jsdelivr.net/gh/aazbeltran/Surge/Scripts/PantoneStudio.js
+
+[MITM]
+hostname = %APPEND% studio.pantone.com

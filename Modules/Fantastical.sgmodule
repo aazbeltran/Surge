@@ -1,0 +1,8 @@
+#!name=Fantastical subscription
+#!desc=Intercepts the Fantastical license verification and adds the subscription data
+
+[Script]
+fantastical.js = requires-body=1,max-size=0,type=http-response,pattern=^https:\/\/api\.flexibits\.com\/v1\/(auth|account)\/(device|details|appstore-receipt)\/$,script-path=https://cdn.jsdelivr.net/gh/aazbeltran/Surge/Scripts/Fantastical.js
+
+[MITM]
+hostname = %APPEND% *.flexibits.com

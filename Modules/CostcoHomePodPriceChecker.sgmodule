@@ -1,0 +1,5 @@
+#!name=Costco HomePod Price Checker
+#!desc=Checks the price of the HomePod at Costco Mexico hourly and sends a notification when a price change is detected
+
+[Script]
+HomepodPriceChecker = type=cron,cronexp=0 * * * *,script-path=https://cdn.jsdelivr.net/gh/aazbeltran/Surge/Scripts/HomePodPriceChecker.js

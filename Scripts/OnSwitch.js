@@ -37,3 +37,4 @@ if ($request.headers['User-Agent'].startsWith('OnSwitch')) {
     });
     $done({response: {body}});
 }
+$done({});

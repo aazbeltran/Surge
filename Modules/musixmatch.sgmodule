@@ -2,7 +2,7 @@
 #!desc=Intercepts the musixmatch license verification and adds the subscription data
 
 [Script]
-Musixmatch.js = requires-body=1,max-size=0,type=http-response,pattern=^https:\/\/apic\.musixmatch\.com\/ws\/.*\/config\.get,script-path=https://raw.githack.com/aazbeltran/Surge/main/Scripts/musixmatch.js
+Musixmatch.js = requires-body=1,max-size=0,type=http-response,pattern=^https:\/\/apic\.musixmatch\.com\/ws\/.*\/config\.get,script-path=https://cdn.jsdelivr.net/gh/aazbeltran/Surge/Scripts/musixmatch.js
 
 [MITM]
 hostname = %APPEND% apic.musixmatch.com

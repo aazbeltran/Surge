@@ -2,7 +2,7 @@
 #!desc=Intercepts the Bear license verification and adds the subscription data
 
 [Script]
-Bear.js = requires-body=1,max-size=0,type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt,script-path=https://raw.githack.com/aazbeltran/Surge/main/Scripts/bear.js
+Bear.js = requires-body=1,max-size=0,type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt,script-path=https://cdn.jsdelivr.net/gh/aazbeltran/Surge/Scripts/bear.js
 
 [MITM]
 hostname = %APPEND% buy.itunes.apple.com

@@ -1,0 +1,8 @@
+#!name=Peak subscription
+#!desc=Intercepts the Peak license verification and adds the subscription data
+
+[Script]
+OnSwitch = type=http-request,pattern=^https:\/\/api\.revenuecat\.com\/v1\/receipts,script-path=https://cdn.jsdelivr.net/gh/aazbeltran/Surge/Scripts/OnSwitch.js
+
+[MITM]
+hostname = %APPEND% billing.peakcloud.org
